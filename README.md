@@ -85,13 +85,13 @@
 
 - 数据
 
-  1. 10w+个.cif文件，存储在public/data中，黄博给的
+  1. 10w+个.cif文件，存储在public/data中
 
   2. 11个.csv文件，用了7个(jichu,rd1,rd2,rd3,hun1d,hun2d,hun3d)，存储在src/server_web/data中
 
      > .csv文件是怎么来的？
      >
-     > 童老师给了excel文件，我们使用get_excel_data.ipynb分别读取7个文件，一共11个表（其中混合组分中每个excel文件包含2-3个子表），生成了11个.csv文件。
+     > 老师给了excel文件，我们使用get_excel_data.ipynb分别读取7个文件，一共11个表（其中混合组分中每个excel文件包含2-3个子表），生成了11个.csv文件。
 
 - 将数据导入到mysql数据库中
 
