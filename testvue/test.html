@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>3dmol_api</title> 
+        
+        <style>
+          .mol-container {
+            width: 400px;
+            height: 400px;
+            position: relative;
+          }
+          </style>
+
+        <script src="https://3Dmol.org/build/3Dmol-min.js"></script>     
+        <script src="https://3Dmol.org/build/3Dmol.ui-min.js"></script>    
+        <script src="https://code.jquery.com/jquery-3.6.3.min.js"></script> 
+        
+        
+      </head>
+    <body>
+      <p>test</p>
+      <div id="container-01" class="mol-container"></div>
+
+      <script>
+        var viewer = $3Dmol.createViewer( "container-01" );
+        const url = '../../public/data/test/test/tbo_fit.cif';
+        // ../../public/data/mof/generated_structures_mof/generated_structures_1/mof_1.cif
+
+        $3Dmol.get(url, function(data) {
+              viewer.addModel(data,"cif");
+              viewer.setStyle({}, {stick: {}});
+              viewer.addUnitCell(viewer, {box:{color:'grey',linewidth:2},alabel:'X',blabel:'Y',clabel:'Z'});
+              viewer.zoomTo();
+              viewer.render();
+        });
+
+
+
+
+    
+        
+        
+        
+        
+        // $3Dmol.get(url, function(data){
+        //       viewer.addModel(data, "cif");
+        //       viewer.setStyle({}, {stick: {}});
+        //         // 特性标签 addLable addPropertyLabels
+        //       // viewer.addPropertyLabels("index",{not:{elem:'H'}}, {fontColor:'black',font: 'sans-serif', fontSize: 28, showBackground:false,alignment:'center'});
+        //         // 叠加style   viewer.addStyle()
+        //         // addSurface
+        //         // addUnitCell
+        //         // createModelFrom
+        //       viewer.render();
+        //       viewer.zoomTo();
+        //   });
+
+
+          // // 添加一个球
+          // viewer.addSphere({ center: {x:0, y:0, z:0}, radius: 10.0, color: 'green' });
+          // viewer.zoomTo();
+          // viewer.render();
+          // viewer.zoom(0.8, 2000);
+
+          // // 设置背景颜色为白色
+          // viewer.setBackgroundColor('white');
+        // });
+        </script>
+
+
+    </body>
+</html>

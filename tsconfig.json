@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": false,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "noEmit": true,
+    "allowJs": true,
+    "noImplicitAny": false, // 不进行any语法检查
+    "types": ["node"],
+  },
+  
+  "include": [
+    "**/*.d.ts", 
+    "src/**/*.ts",
+    "src/**/*.d.ts", 
+    "src/**/*.tsx", 
+    "src/**/*.vue",
+    "types",
+    "src/**/*.js",  // 导入js
+    "src/assets/3Dmol.js",
+    "src/assets/3Dmol.ui.js",
+    "/**/*.ts"
+  ],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  
+}
+
